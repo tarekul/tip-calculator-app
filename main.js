@@ -69,7 +69,14 @@ function setTip() {
 
     if (this.id !== 'custom') {
         document.getElementById('custom').value = '';
-        this.classList.add('bg-teal-900'); 
+        this.classList.add('bg-teal-900');
+
+        if(prevSelected) {
+            if(prevSelected.id == this.id) {
+                this.classList.remove('bg-teal-900');
+                this.classList.add('bg-cyan-700'); 
+            }
+        }
     }
 
     handleBill();
