@@ -15,9 +15,9 @@ function reset() {
     document.getElementById('tip').innerText = '$0.00';
     document.getElementById('total').innerText = '$0.00';
 
-    const prevSelected = document.querySelector('button[name="tip"].bg-sky-700');
+    const prevSelected = document.querySelector('button[name="tip"].bg-teal-900');
     if (prevSelected) {
-        prevSelected.classList.remove('bg-sky-700');
+        prevSelected.classList.remove('bg-teal-900');
         prevSelected.classList.add('bg-cyan-700'); 
     }
 }
@@ -31,7 +31,7 @@ function calculate(bill, people, tip, typeOfTip) {
 function handleBill() {
     const bill = document.getElementById('bill').value;
     const people = validatePeople();
-    const selection = document.querySelector('button[name="tip"].bg-sky-700')
+    const selection = document.querySelector('button[name="tip"].bg-teal-900')
     let tip = 0;
     let typeOfTip = '';
     if (selection) {
@@ -61,15 +61,15 @@ function tipPerPerson(bill, people, tip, typeOfTip) {
 }
 
 function setTip() {
-    const prevSelected = document.querySelector('button[name="tip"].bg-sky-700');
+    const prevSelected = document.querySelector('button[name="tip"].bg-teal-900');
     if (prevSelected) {
-        prevSelected.classList.remove('bg-sky-700');
+        prevSelected.classList.remove('bg-teal-900');
         prevSelected.classList.add('bg-cyan-700'); 
     }
 
     if (this.id !== 'custom') {
         document.getElementById('custom').value = '';
-        this.classList.add('bg-sky-700'); 
+        this.classList.add('bg-teal-900'); 
     }
 
     handleBill();
