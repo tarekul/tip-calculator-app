@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  
+  <script defer src="main.js"></script>
   <title>Frontend Mentor | Tip calculator app</title>
 
   <style>
@@ -31,23 +31,23 @@
         <span class="absolute left-3 top-2 text-gray-500">
           <img src="images/icon-dollar.svg" alt="">
         </span>
-        <input class="bg-gray-100 rounded-lg p-2 text-right w-full" type="text" name="bill" id="bill" placeholder="0">
+        <input class="bg-gray-100 rounded-lg p-2 text-right w-full" type="text" name="bill" id="bill" placeholder="0" autocomplete="off">
       </div>
       <p class="mb-5 mt-5 text-cyan-700">Select Tip %</p>
       <div class="grid grid-cols-3 gap-2">
-        <button class="bg-cyan-700 text-white rounded-lg p-2">5%</button>
-        <button class="bg-cyan-700 text-white rounded-lg p-2">10%</button>
-        <button class="bg-cyan-700 text-white rounded-lg p-2">15%</button>
-        <button class="bg-cyan-700 text-white rounded-lg p-2">25%</button>
-        <button class="bg-cyan-700 text-white rounded-lg p-2">50%</button>
-        <input class="bg-gray-100 text-cyan-600 rounded-lg p-2 text-center" type="text" name="custom" id="custom" placeholder="Custom">
+        <button class="bg-cyan-700 text-white rounded-lg p-2 hover:bg-sky-700" id="tip-5" name="tip">5%</button>
+        <button class="bg-cyan-700 text-white rounded-lg p-2 hover:bg-sky-700" id="tip-10" name="tip">10%</button>
+        <button class="bg-cyan-700 text-white rounded-lg p-2 hover:bg-sky-700" id="tip-15" name="tip">15%</button>
+        <button class="bg-cyan-700 text-white rounded-lg p-2 hover:bg-sky-700" id="tip-25" name="tip">25%</button>
+        <button class="bg-cyan-700 text-white rounded-lg p-2 hover:bg-sky-700" id="tip-50" name="tip">50%</button>
+        <input class="bg-gray-100 text-cyan-600 rounded-lg p-2 text-left" type="text" name="custom" id="custom" placeholder="Custom" autocomplete="off">
       </div>
       <p class="mb-5 mt-5 text-cyan-700">Number of People</p>
       <div class="relative flex w-full">
         <span class="absolute left-3 top-3 text-gray-500">
           <img src="images/icon-person.svg" alt="">
         </span>
-        <input class="bg-gray-100 rounded-lg p-2 text-right w-full" type="text" name="people" id="people" placeholder="0">
+        <input class="bg-gray-100 rounded-lg p-2 text-right w-full" type="text" name="people" id="people" placeholder="0" autocomplete="off">
       </div>
     </div>
     <div class="bg-cyan-700 w-1/2 h-full rounded-lg flex flex-col items-start p-5">
