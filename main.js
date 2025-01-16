@@ -29,7 +29,7 @@ function calculate(bill, people, tip, typeOfTip) {
 }
 
 function handleBill() {
-    const bill = document.getElementById('bill').value;
+    const bill = validateBill();
     const people = validatePeople();
     const selection = document.querySelector('button[name="tip"].bg-teal-900')
     let tip = 0;
@@ -83,10 +83,25 @@ function setTip() {
 }
 
 validatePeople = () => {
-    const people = document.getElementById('people').value;
-    document.getElementById('people').value = people.replace(/[^0-9]/g, '');
+    let people = document.getElementById('people').value;
+    people = people.replace(/[^0-9]/g, '');
 
     return people;
+}
+
+validateBill = () => {
+    let bill = document.getElementById('bill').value;
+    bill = bill.replace(/[^0-9.]/g, '');
+
+    if ((bill.match(/\./g) || []).length > 1) {
+        bill = bill.split('.').slice(0, 1).join('') + '.' + bill.split('.').slice(1).join('');
+    }
+    if ((bill.match(/\./g) || []).length == 1) {
+        bill = bill.split('.')[0] + '.' + bill.split('.')[1].split('').slice(0, 2).join('');
+    }
+
+    document.getElementById('bill').value = bill;
+    return bill;
 }
 
 function validateCustomTip() {
